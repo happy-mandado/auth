@@ -2,7 +2,7 @@ const express = require('express');
 const passport = require('passport');
 
 module.exports = (
-  db, _app, { path, domain, scope, redirectURL, secure, name, version }
+  db, _app, { path, domain, scope, redirectURL, logoutURL, secure, name, version }
 ) => {
   const router = express.Router();
 
@@ -11,12 +11,14 @@ module.exports = (
   });
 
   router.get('/logout', (req, res) => {
+    req.logout();
+
     // Access Token Cookie
     res.clearCookie(name + '-at', { path, domain });
     // User Profile Cookie
     res.clearCookie(name + '-pr', { path, domain });
 
-    res.redirect(redirectURL);
+    res.redirect(logoutURL);
   });
 
   router.get('/callback', function (req, res, next) {
@@ -45,7 +47,6 @@ module.exports = (
       );
 
       res.redirect(redirectURL);
-
     })(req, res, next);
   });
 

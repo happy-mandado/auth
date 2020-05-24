@@ -1,6 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
+const url = require('url');
 
 const middlewares = require('./middlewares');
 const authAPI = require('./auth');
@@ -25,12 +26,20 @@ module.exports = (db, { version, auth, cookie, cors }) => {
   // "Unable to verify authorization request state"
   app.enable('trust proxy');
 
+  const logoutURL = new url.URL(auth.logoutURL);
+  const searchParams = new URLSearchParams({
+    client_id: auth.clientId,
+    returnTo: auth.redirectURL,
+  });
+  logoutURL.search = searchParams.toString();
+
   const router = authAPI(
     db,
     app,
     {
       scope: auth.scope,
       redirectURL: auth.redirectURL,
+      logoutURL: logoutURL,
       secure: cookie.secure,
       domain: cookie.domain,
       path: cookie.path,
