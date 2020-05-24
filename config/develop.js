@@ -9,7 +9,6 @@ module.exports = {
     },
     port: 8080,
     auth: {
-      scope: 'openid email profile',
       callbackURL: 'http://auth.happymandado.local:8080/v1/callback',
       redirectURL: 'http://happymandado.local:3000',
     },

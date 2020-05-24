@@ -10,7 +10,6 @@ module.exports = {
     },
     port: 80,
     auth: {
-      scope: 'openid email profile',
       // callbackURL: 'https://auth.happymandado.com/v1/callback',
       callbackURL: 'https://auth.bernuzz.com/v1/callback',
       // redirectURL: 'https://app.happymandado.com',
