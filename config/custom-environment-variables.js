@@ -3,6 +3,7 @@ module.exports = {
     port: 'PORT',
     auth: {
       domain: 'API_AUTH_DOMAIN',
+      scope: 'API_AUTH_SCOPE',
       clientId: 'API_AUTH_CLIENT_ID',
       clientSecret: 'API_AUTH_CLIENT_SECRET',
       logoutURL: 'API_AUTH_LOGOUT_URL',
