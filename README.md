@@ -1,11 +1,10 @@
-# Auth
-Boilerplate service to handle authentication in web apps.
-
+# Happy Mandado Auth
+Handles happy mandado webapp authentication
 
 ## Setup
 
 ### Requirements
-Install nodejs + yarn:
+Install nodejs:
 ```bash
 $ brew install nodeenv
 
@@ -17,16 +16,39 @@ $ cd /path/to/waitress/repo/path
 $ npm install
 ```
 
+Auth0 tenant:
+```
+Domain
+Client ID
+Client Secret
+Scope
+```
+
 ### Config files
+Each env must require its own:
+ - Domain
+ - API Origin
+ - API Port
+ - Auth callback
+ - Auth redirect
+ - Cookie name
+ - Cookie secret
+ - Cookie domain
 
 
 ## Test
 ```bash
-$ yarn test-unit
-$ yarn --silent run test-path path/to/file
+$ npm test-unit
+$ npm --silent run test-path path/to/file
 ```
 
 ## Run
+Development
+```bash
+$ npm start-dev
+```
+
+Production
 ```bash
 $ npm start
 ```
