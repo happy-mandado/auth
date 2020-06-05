@@ -1,10 +1,10 @@
 {
-  "name": "auth",
+  "name": "@happy-mandado/auth",
   "version": "0.1.0",
-  "description": "Auth Boilerplate",
+  "description": "Happy Mandado auth",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --ext .js .",
+    "lint": "eslint --ext .js .",
     "start": "NODE_ENV=production node index.js",
     "start-dev": "NODE_ENV=develop node index.js",
     "test-api": "NODE_ENV=test-api ./node_modules/mocha/bin/mocha --reporter spec -u tdd 'test/api/**/*.test.js'",
@@ -12,10 +12,13 @@
     "test-path": "NODE_ENV=test-unit ./node_modules/mocha/bin/mocha --reporter spec -u tdd -- ",
     "test-unit-coverage": "NODE_ENV=test-unit ./node_modules/.bin/nyc ./node_modules/.bin/_mocha -u tdd 'test/unit/**/*.test.js'"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grevych/mandado-auth.git"
+  },
   "author": "grevych@gmail.com",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "config": "^2.0.1",
     "cookie-parser": "^1.4.4",
@@ -39,5 +42,18 @@
     "sinon": "^6.3.5",
     "supertest": "^3.4.2",
     "uuid": "^3.3.2"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "keywords": [
+    "happy-mandado",
+    "auth",
+    "webapp"
+  ],
+  "bugs": {
+    "url": "https://github.com/grevych/mandado-auth/issues"
+  },
+  "homepage": "https://github.com/grevych/mandado-auth#readme"
 }
