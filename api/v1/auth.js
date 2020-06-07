@@ -35,7 +35,7 @@ module.exports = (
       // Access Token Cookie
       res.cookie(
         name + '-at',
-        extraParams.access_token,
+        extraParams.id_token,
         { httpOnly: true, secure, domain }
       );
 
