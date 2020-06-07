@@ -16,7 +16,7 @@ module.exports = {
       name: 'mandado-dev',
       secure: false,
       secret: 'secret',
-      domain: '.mandado.local',
+      domain: '.happymandado.local',
       path: '/',
       proxy: false,
     },
