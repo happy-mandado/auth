@@ -21,7 +21,7 @@ module.exports = {
       origin: 'API_CORS_ORIGIN',
       credentials: 'API_CORS_CREDENTIALS',
     },
-    port: 'API_PORT',
+    port: 'PORT', // HEROKU NAMING CONVENTION
     version: 'API_VERSION',
   },
   database: {
