@@ -7,7 +7,7 @@ module.exports = {
       secure: true,
       proxy: true,
     },
-    port: 80,
+    port: null,
     version: 'v1',
   },
 };
