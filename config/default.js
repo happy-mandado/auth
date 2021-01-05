@@ -1,6 +1,5 @@
 module.exports = {
   api: {
-    version: '',
     auth: {
       domain: '',
       scope: '',
@@ -12,14 +11,21 @@ module.exports = {
     },
     cookie: {
       name: '',
-      secure: true,
+      secure: false,
       secret: '',
       domain: '',
       path: '',
       proxy: false,
     },
+    cors: {
+      origin: [],
+      credentials: false,
+    },
+    port: 0,
+    version: '',
   },
   database: {
-    driver: 'memory',
+    driver: '',
+    name: '',
   },
 };
