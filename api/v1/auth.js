@@ -38,6 +38,7 @@ module.exports = (
         extraParams.id_token,
         { httpOnly: true, secure, domain }
       );
+      console.log(extraParams.id_token)
 
       // User Profile Cookie
       res.cookie(
